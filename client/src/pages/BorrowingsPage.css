@@ -1,0 +1,272 @@
+/* ===========================
+   BorrowingsPage — Reader Folio
+   =========================== */
+
+.borrowings-page {
+  min-height: 75vh;
+}
+
+.borrowings-page__header {
+  background-color: var(--color-ivory);
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.borrowings-page__title {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.borrowings-page__subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.borrowings-page__filter-box {
+  max-width: 440px;
+}
+
+.borrowings-page__body {
+  background-color: var(--color-white);
+  padding: var(--space-3xl) 0 var(--space-4xl);
+}
+
+.borrowings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.borrow-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast);
+}
+
+.borrow-card:hover {
+  border-color: rgba(23, 23, 23, 0.35);
+}
+
+.borrow-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-sm);
+}
+
+.borrow-card__genre {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+}
+
+.borrow-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: var(--space-2xs);
+}
+
+.borrow-card__title a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.borrow-card__title a:hover {
+  color: var(--color-royal-blue);
+}
+
+.borrow-card__author {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.borrow-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-md);
+  font-size: var(--fs-xs);
+}
+
+.borrow-card__meta-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+}
+
+.borrow-card__meta-row strong {
+  color: var(--color-black);
+}
+
+.borrow-card__note {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin-bottom: var(--space-md);
+}
+
+.borrow-card__footer {
+  margin-top: auto;
+  padding-top: var(--space-sm);
+}
+
+.borrow-card__btn {
+  width: 100%;
+  padding: 0.55rem 1rem;
+  font-size: var(--fs-xs);
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+}
+
+.borrow-card__btn:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}
+
+/* ==========================================================================
+   Handover Coordination Section (Phase 8)
+   ========================================================================== */
+
+.borrow-handover-box {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-ivory);
+}
+
+.borrow-handover-box--proposed {
+  border-color: rgba(35, 62, 120, 0.35);
+  background-color: #f7f9fc;
+}
+
+.borrow-handover-box--accepted {
+  border-color: rgba(90, 110, 60, 0.4);
+  background-color: #f8faf6;
+}
+
+.borrow-handover-box--declined {
+  border-color: rgba(180, 50, 50, 0.3);
+  background-color: #fff9f9;
+}
+
+.borrow-handover-box--waiting {
+  background-color: var(--color-ivory);
+  border-style: dashed;
+}
+
+.borrow-handover-box__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.borrow-handover-box__details {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: var(--space-xs) 0;
+}
+
+.borrow-handover-box__details p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.borrow-handover-box__prompt {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-royal-blue);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.borrow-handover-box__actions {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.borrow-handover-box__btn-yes {
+  flex: 1;
+  padding: 0.45rem 0.75rem;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+  cursor: pointer;
+}
+
+.borrow-handover-box__btn-yes:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}
+
+.borrow-handover-box__btn-no {
+  flex: 1;
+  padding: 0.45rem 0.75rem;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-border-dark);
+  cursor: pointer;
+}
+
+.borrow-handover-box__btn-no:hover {
+  background-color: #fde8e8;
+  border-color: #d9534f;
+  color: #b52b27;
+}
+
+.borrow-handover-box__note {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin: var(--space-xs) 0 0;
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .borrowings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .borrowings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,88 @@
+/* ===========================
+   NeighborhoodFilter — Editorial Community Locator
+   =========================== */
+
+.neighborhood-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.neighborhood-filter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.neighborhood-filter__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.neighborhood-filter__hint {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--color-olive);
+  font-weight: var(--fw-medium);
+  background-color: rgba(90, 110, 60, 0.08);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(90, 110, 60, 0.2);
+}
+
+.neighborhood-filter__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.neighborhood-filter__select {
+  padding: 0.45rem 1rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  min-width: 220px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.neighborhood-filter__select:focus {
+  outline: none;
+  border-color: var(--color-royal-blue);
+  box-shadow: 0 0 0 3px rgba(35, 62, 120, 0.1);
+}
+
+.neighborhood-filter__reset-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 0.42rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.neighborhood-filter__reset-btn:hover {
+  background-color: var(--color-ivory);
+  color: var(--color-black);
+  border-color: var(--color-border-dark);
+}
+

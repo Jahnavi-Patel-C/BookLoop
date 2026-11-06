@@ -1,0 +1,51 @@
+/* ===========================
+   EmptyState — Editorial Shelf
+   =========================== */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+  gap: var(--space-md);
+  border: 1px dashed var(--color-border);
+  background-color: var(--color-ivory);
+  border-radius: var(--border-radius);
+  margin: var(--space-xl) 0;
+}
+
+.empty-state__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-royal-blue);
+  opacity: 0.7;
+}
+
+.empty-state__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.empty-state__message {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  max-width: 440px;
+  line-height: var(--lh-relaxed);
+}
+
+.empty-state .btn {
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+  margin-top: var(--space-xs);
+}
+
+.empty-state .btn:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}

@@ -1,0 +1,126 @@
+/* ===========================
+   CirculationPage — Community Ledger
+   =========================== */
+
+.circulation-page {
+  min-height: 75vh;
+}
+
+.circulation-page__header {
+  background-color: var(--color-ivory);
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.circulation-page__title {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.circulation-page__subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.circulation-page__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.circulation-page__tab-btn {
+  padding: 0.45rem 1rem;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.circulation-page__tab-btn:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}
+
+.circulation-page__tab-btn--active {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-black);
+  box-shadow: inset 0 0 0 1.5px var(--color-white);
+  font-weight: var(--fw-semibold);
+}
+
+.circulation-page__body {
+  background-color: var(--color-white);
+  padding: var(--space-3xl) 0 var(--space-4xl);
+}
+
+.circulation-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+}
+
+.circulation-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+}
+
+.circulation-table th {
+  background-color: var(--color-ivory);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.circulation-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-black);
+  vertical-align: middle;
+}
+
+.circulation-table tr:last-child td {
+  border-bottom: none;
+}
+
+.circulation-table__title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.circulation-table__title a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.circulation-table__title a:hover {
+  color: var(--color-royal-blue);
+}
+
+.circulation-table__author {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2xs);
+}
+

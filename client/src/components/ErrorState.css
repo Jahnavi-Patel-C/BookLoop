@@ -1,0 +1,51 @@
+/* ===========================
+   ErrorState — Editorial Notice
+   =========================== */
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+  gap: var(--space-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  margin: var(--space-xl) 0;
+}
+
+.error-state__icon {
+  width: 44px;
+  height: 44px;
+  color: #b00020;
+  opacity: 0.85;
+}
+
+.error-state__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.error-state__message {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  max-width: 420px;
+  line-height: var(--lh-relaxed);
+}
+
+.error-state .btn {
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+  margin-top: var(--space-xs);
+}
+
+.error-state .btn:hover {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}

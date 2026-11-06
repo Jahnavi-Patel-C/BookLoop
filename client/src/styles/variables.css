@@ -1,0 +1,85 @@
+/* ===========================
+   BookLoop Design Tokens
+   Approved Palette:
+   - Royal Blue: #233E78
+   - Olive: #788451 (restrained decorative accents only)
+   - Ivory: #F7F7F0
+   - Black: #171717
+   - White: #FFFFFF
+   =========================== */
+
+:root {
+  /* Approved Palette */
+  --color-royal-blue: #233E78;
+  --color-royal-blue-hover: #182c57;
+  --color-royal-blue-active: #132243;
+  --color-olive: #788451;
+  --color-ivory: #F7F7F0;
+  --color-black: #171717;
+  --color-white: #FFFFFF;
+
+  /* Strict Semantic Tokens (Monochrome + Approved Colors Only) */
+  --color-bg-primary: var(--color-white);
+  --color-bg-alt: var(--color-ivory);
+  --color-bg-card: var(--color-white);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: rgba(23, 23, 23, 0.72);
+  --color-text-muted: rgba(23, 23, 23, 0.52);
+
+  /* Borders & Rules - Crisp architectural hairlines */
+  --color-border: rgba(23, 23, 23, 0.12);
+  --color-border-subtle: rgba(23, 23, 23, 0.06);
+  --color-border-dark: var(--color-black);
+
+  /* Functional status */
+  --color-available: var(--color-royal-blue);
+  --color-unavailable: rgba(23, 23, 23, 0.45);
+
+  /* Typography */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.75rem;     /* 12px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px */
+  --fs-md: 1.125rem;    /* 18px */
+  --fs-lg: 1.25rem;     /* 20px */
+  --fs-xl: 1.5rem;      /* 24px */
+  --fs-2xl: 1.875rem;   /* 30px */
+  --fs-3xl: 2.375rem;   /* 38px */
+  --fs-4xl: 3rem;       /* 48px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.35;
+  --lh-normal: 1.55;
+  --lh-relaxed: 1.65;
+
+  /* Spacing */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+
+  /* Layout */
+  --max-width: 1160px;
+  --max-width-narrow: 720px;
+  --border-radius: 2px;
+  --border-radius-md: 3px;
+
+  /* Minimal editorial elevations */
+  --shadow-subtle: 0 1px 3px rgba(23, 23, 23, 0.05);
+
+  /* Transitions */
+  --transition-fast: 140ms ease;
+  --transition-base: 220ms ease;
+}

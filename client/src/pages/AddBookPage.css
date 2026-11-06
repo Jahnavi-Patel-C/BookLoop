@@ -1,0 +1,342 @@
+/* ===========================
+   AddBookPage — Editorial Ledger Entry
+   =========================== */
+
+.add-book-page {
+  min-height: 75vh;
+  padding: var(--space-3xl) 0 var(--space-4xl);
+  background-color: var(--color-ivory);
+}
+
+.add-book__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.add-book__title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin-bottom: var(--space-xs);
+}
+
+.add-book__subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* =======================================
+   Google Books Lookup Card
+   ======================================= */
+.add-book__lookup-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-olive);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  max-width: 660px;
+  margin: 0 auto var(--space-xl);
+  box-shadow: 0 2px 8px rgba(23, 23, 23, 0.03);
+}
+
+.lookup-card__header {
+  margin-bottom: var(--space-md);
+}
+
+.lookup-card__badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-olive);
+  margin-bottom: var(--space-2xs);
+}
+
+.lookup-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--space-2xs);
+}
+
+.lookup-card__subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.lookup-card__search-bar {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.lookup-card__input {
+  flex: 1;
+}
+
+.lookup-card__btn {
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  border: 1px solid var(--color-royal-blue);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.lookup-card__btn:hover:not(:disabled) {
+  background-color: var(--color-royal-blue-hover);
+  border-color: var(--color-royal-blue-hover);
+}
+
+.lookup-card__btn-clear {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+}
+
+.lookup-card__btn-clear:hover {
+  border-color: var(--color-black);
+  color: var(--color-black);
+}
+
+.lookup-card__error-msg {
+  margin-top: var(--space-sm);
+  font-size: 0.875rem;
+  color: #c92a2a;
+  background-color: #fff5f5;
+  border: 1px solid #ffc9c9;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius);
+}
+
+/* Lookup Results List */
+.lookup-card__results {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border);
+}
+
+.lookup-card__results-header {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.lookup-card__results-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: var(--space-2xs);
+}
+
+.lookup-card__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lookup-card__item:hover {
+  border-color: var(--color-royal-blue);
+  background-color: var(--color-ivory);
+}
+
+.lookup-card__thumb-wrap {
+  width: 44px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 1px;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lookup-card__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lookup-card__thumb-fallback {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  text-align: center;
+}
+
+.lookup-card__thumb-fallback span {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.lookup-card__item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lookup-card__item-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lookup-card__item-author {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.lookup-card__item-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.lookup-card__item-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.lookup-card__use-btn {
+  background-color: transparent;
+  color: var(--color-royal-blue);
+  border: 1px solid var(--color-royal-blue);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.lookup-card__use-btn:hover {
+  background-color: var(--color-royal-blue);
+  color: var(--color-white);
+}
+
+/* =======================================
+   Add Book Form
+   ======================================= */
+.add-book__form {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-royal-blue);
+  border-radius: var(--border-radius);
+  padding: var(--space-2xl);
+  max-width: 660px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(23, 23, 23, 0.03);
+}
+
+.add-book__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.cover-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.cover-thumbnail-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs);
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  max-width: 220px;
+}
+
+.cover-thumbnail-preview img {
+  width: 38px;
+  height: 52px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.cover-thumbnail-preview span {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.add-book__actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.add-book__actions .btn {
+  padding: 0.7rem 1.6rem;
+}
+
+@media (max-width: 640px) {
+  .add-book__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .add-book__form {
+    padding: var(--space-lg);
+  }
+
+  .lookup-card__search-bar {
+    flex-direction: column;
+  }
+
+  .lookup-card__btn,
+  .lookup-card__btn-clear {
+    width: 100%;
+  }
+
+  .add-book__actions {
+    flex-direction: column;
+  }
+
+  .add-book__actions .btn {
+    width: 100%;
+  }
+}
