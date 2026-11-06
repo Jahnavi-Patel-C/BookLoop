@@ -1,7 +1,7 @@
 const { Server } = require('socket.io');
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'bookloop_jwt_secret_editorial_2026_secure_key';
+const { JWT_SECRET } = require('../config/jwt');
 
 let io = null;
 

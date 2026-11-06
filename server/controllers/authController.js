@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'bookloop_jwt_secret_editorial_2026_secure_key';
+const { JWT_SECRET } = require('../config/jwt');
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 
 const isProd = process.env.NODE_ENV === 'production';

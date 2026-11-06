@@ -1,4 +1,9 @@
 require('dotenv').config();
+const { resolveJwtSecret } = require('./config/jwt');
+
+// Validate JWT secret early; fails fast on invalid or missing secret in production
+resolveJwtSecret();
+
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
@@ -19,12 +24,17 @@ initSocket(server);
 // Connect to MongoDB & run migrations and background schedulers
 connectDB().then(async () => {
   try {
-    const { seedDevUsers } = require('./scripts/seedDevUsers');
-    const migratePhase2_5 = require('./scripts/migratePhase2_5');
-    const migratePhase3 = require('./scripts/migratePhase3');
-    await seedDevUsers();
-    await migratePhase2_5();
-    await migratePhase3();
+    const isProduction = process.env.NODE_ENV === 'production';
+    if (!isProduction) {
+      const { seedDevUsers } = require('./scripts/seedDevUsers');
+      const migratePhase2_5 = require('./scripts/migratePhase2_5');
+      const migratePhase3 = require('./scripts/migratePhase3');
+      await seedDevUsers();
+      await migratePhase2_5();
+      await migratePhase3();
+    } else {
+      console.log('[BookLoop] Production mode active: skipping seedDevUsers and legacy migrations.');
+    }
     startScheduler();
   } catch (err) {
     console.error(`[BookLoop] Startup initialization failed: ${err.message}`);

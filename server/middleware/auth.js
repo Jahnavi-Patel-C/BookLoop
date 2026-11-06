@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'bookloop_jwt_secret_editorial_2026_secure_key';
+const { JWT_SECRET } = require('../config/jwt');
 
 /**
  * Non-blocking middleware to authenticate user from HTTP-only cookie

@@ -358,10 +358,12 @@ npm run dev
 ```
 The Vite development server starts at `http://localhost:5173`. Requests to `/api` and `/socket.io` are automatically proxied to the backend on port 5000.
 
-### Pre-Seeded Demo Accounts
-For immediate local testing, the following demo accounts are available:
-- **Alice**: `alice@bookloop.local` / Password: `BookLoop2026!`
-- **Bob**: `bob@bookloop.local` / Password: `BookLoop2026!`
+### Pre-Seeded Demo Accounts (Development Only)
+For local development and testing (`NODE_ENV !== 'production'`), demo accounts are seeded automatically if absent:
+- **Alice**: `alice@bookloop.local` (Development only)
+- **Bob**: `bob@bookloop.local` (Development only)
+
+*Note: Demo account seeding is disabled in production environments.*
 
 ---
 
@@ -435,6 +437,7 @@ Generates an optimized SPA bundle in `client/dist/` with zero TypeScript or bund
 6. **Loan Deletion Guard**: Books with active loans (`availability: false`) cannot be deleted, preventing orphaned loans and circulation records.
 7. **Production Error Masking**: Internal server errors (HTTP 500) return a generic message in production to prevent stack trace or database credential exposure.
 8. **In-Memory Guard in Production**: If `NODE_ENV === 'production'`, the server refuses to fall back to `MongoMemoryServer`, guaranteeing that cloud servers fail fast rather than saving data to ephemeral RAM.
+9. **Mandatory Production JWT Secret**: When `NODE_ENV === 'production'`, `JWT_SECRET` is strictly required and must be at least 32 characters long. The application fails fast at startup if missing or weak. Fallback secrets and demo user seeding are strictly confined to local development.
 
 ---
 
